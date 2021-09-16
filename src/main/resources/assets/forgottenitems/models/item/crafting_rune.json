@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "forgottenitems:items/crafting_rune_base",
+        "layer1": "forgottenitems:items/crafting_rune_color"
+    }
+}

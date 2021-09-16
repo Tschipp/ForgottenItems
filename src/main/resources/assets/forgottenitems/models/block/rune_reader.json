@@ -1,0 +1,12 @@
+{
+    "parent": "forgottenitems:block/rune_reader_base",
+	"ambientocclusion": false,
+    "textures": {
+        "base_down": "forgottenitems:blocks/base_down",
+		"base_side": "forgottenitems:blocks/base_side",
+		"center_side": "forgottenitems:blocks/center_side",
+		"beacon"   : "blocks/beacon",
+		"redstone"   : "blocks/redstone_block"  	,
+		"quartz_pillar" : "blocks/quartz_block_lines_top"
+    }
+}

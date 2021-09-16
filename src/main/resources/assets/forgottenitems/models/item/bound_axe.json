@@ -1,0 +1,7 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "forgottenitems:items/bound_axe",
+        "layer1": "forgottenitems:items/axe_stick"
+    }
+}

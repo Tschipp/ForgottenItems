@@ -1,0 +1,16 @@
+[
+{
+  "modid": "forgottenitems",
+  "name": "Forgotten Items",
+  "description": "Forgotten Items adds special Items that are crafted in a unique way",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Tschipp"],
+  "credits": "Minecraftforge.net for Support",
+  "logoFile": "assets/forgottenitems/logo.png",
+  "screenshots": [],
+  "dependencies": ["tschipplib"]
+}
+]
