@@ -4,22 +4,21 @@ import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityArmorStand;
 
-public class ModelGolemArmor extends ModelBiped
-{
+public class ModelGolemArmor extends ModelBiped {
 	public ModelRenderer RightLeg;
 	public ModelRenderer LeftLeg;
 	public ModelRenderer RightFoot;
 	public ModelRenderer LeftFoot;
 	private ModelRenderer RightFootTop;
 	private ModelRenderer LeftFootTop;
-	
-	public ModelGolemArmor(float scale)
-	{
+
+	public ModelGolemArmor(float scale) {
 		super(scale, 0, 128, 128);
 		textureWidth = 128;
 		textureHeight = 128;
-		
+
 		bipedHead.cubeList.add(new ModelBox(bipedHead, 0, 115, -5.0F, -8.6F, -5.0F, 10, 3, 10, 0.0F, false));
 		bipedHead.cubeList.add(new ModelBox(bipedHead, 70, 115, -5.0F, -2.9F, -5.1F, 4, 3, 10, 0.0F, false));
 		bipedHead.cubeList.add(new ModelBox(bipedHead, 98, 115, 1.0F, -2.9F, -5.1F, 4, 3, 10, 0.0F, false));
@@ -65,12 +64,12 @@ public class ModelGolemArmor extends ModelBiped
 		bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 108, 79, -1.3F, 1.0F, -2.5F, 5, 2, 5, 0.0F, true));
 		bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 0, 88, -1.3F, 3.0F, -3.0F, 5, 6, 6, 0.0F, true));
 		bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 64, 109, 3.7F, 1.0F, -3.0F, 1, 7, 6, 0.0F, true));
-		
+
 		RightLeg = bipedRightLeg;
 		LeftLeg = bipedLeftLeg;
 		RightFoot = bipedRightLeg;
 		LeftFoot = bipedLeftLeg;
-		
+
 		RightLeg.cubeList.add(new ModelBox(RightLeg, 93, 81, -2.7F, -0.1F, -2.52F, 5, 8, 5, 0.0F, false));
 		RightLeg.cubeList.add(new ModelBox(RightLeg, 46, 78, -2.7F, 7.9F, -2.52F, 5, 1, 5, 0.0F, false));
 
@@ -84,14 +83,45 @@ public class ModelGolemArmor extends ModelBiped
 		LeftFoot.cubeList.add(new ModelBox(LeftFoot, 55, 96, -2.3F, 6.5F, -3.5F, 6, 6, 7, 0.0F, false));
 		LeftFootTop = new ModelRenderer(this);
 		LeftFootTop.cubeList.add(new ModelBox(LeftFoot, 72, 110, -2.3F, 2.5F, -3.5F, 6, 4, 1, 0.0F, false));
-		
+
 		bipedRightLeg.addChild(RightFootTop);
 		bipedLeftLeg.addChild(LeftFootTop);
 	}
 
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
-	{
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+
 		super.render(entity, f, f1, f2, f3, f4, f5);
 		setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+	}
+
+	public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
+			float headPitch, float scaleFactor, Entity entityIn) {
+		if (entityIn instanceof EntityArmorStand) {
+			EntityArmorStand entityarmorstand = (EntityArmorStand) entityIn;
+			this.bipedHead.rotateAngleX = 0.017453292F * entityarmorstand.getHeadRotation().getX();
+			this.bipedHead.rotateAngleY = 0.017453292F * entityarmorstand.getHeadRotation().getY();
+			this.bipedHead.rotateAngleZ = 0.017453292F * entityarmorstand.getHeadRotation().getZ();
+			this.bipedHead.setRotationPoint(0.0F, 1.0F, 0.0F);
+			this.bipedBody.rotateAngleX = 0.017453292F * entityarmorstand.getBodyRotation().getX();
+			this.bipedBody.rotateAngleY = 0.017453292F * entityarmorstand.getBodyRotation().getY();
+			this.bipedBody.rotateAngleZ = 0.017453292F * entityarmorstand.getBodyRotation().getZ();
+			this.bipedLeftArm.rotateAngleX = 0.017453292F * entityarmorstand.getLeftArmRotation().getX();
+			this.bipedLeftArm.rotateAngleY = 0.017453292F * entityarmorstand.getLeftArmRotation().getY();
+			this.bipedLeftArm.rotateAngleZ = 0.017453292F * entityarmorstand.getLeftArmRotation().getZ();
+			this.bipedRightArm.rotateAngleX = 0.017453292F * entityarmorstand.getRightArmRotation().getX();
+			this.bipedRightArm.rotateAngleY = 0.017453292F * entityarmorstand.getRightArmRotation().getY();
+			this.bipedRightArm.rotateAngleZ = 0.017453292F * entityarmorstand.getRightArmRotation().getZ();
+			this.bipedLeftLeg.rotateAngleX = 0.017453292F * entityarmorstand.getLeftLegRotation().getX();
+			this.bipedLeftLeg.rotateAngleY = 0.017453292F * entityarmorstand.getLeftLegRotation().getY();
+			this.bipedLeftLeg.rotateAngleZ = 0.017453292F * entityarmorstand.getLeftLegRotation().getZ();
+			this.bipedLeftLeg.setRotationPoint(1.9F, 11.0F, 0.0F);
+			this.bipedRightLeg.rotateAngleX = 0.017453292F * entityarmorstand.getRightLegRotation().getX();
+			this.bipedRightLeg.rotateAngleY = 0.017453292F * entityarmorstand.getRightLegRotation().getY();
+			this.bipedRightLeg.rotateAngleZ = 0.017453292F * entityarmorstand.getRightLegRotation().getZ();
+			this.bipedRightLeg.setRotationPoint(-1.9F, 11.0F, 0.0F);
+			copyModelAngles(this.bipedHead, this.bipedHeadwear);
+		} else
+			super.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor,
+					entityIn);
 	}
 }
