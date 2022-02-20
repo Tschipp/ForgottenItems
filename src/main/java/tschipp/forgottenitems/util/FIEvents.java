@@ -73,7 +73,7 @@ public class FIEvents {
 		//Gamble Pickaxe
 		if(player != null && !player.getHeldItemMainhand().isEmpty())
 		{
-			if(player.getHeldItemMainhand().getItem() == ItemList.gamblePickaxe)
+			if(!drops.isEmpty() && player.getHeldItemMainhand().getItem() == ItemList.gamblePickaxe)
 			{
 				ItemStack harveststack = player.getHeldItemMainhand();
 
