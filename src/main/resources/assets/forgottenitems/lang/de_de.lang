@@ -1,0 +1,33 @@
+itemGroup.forgottenItems=Forgotten Items
+container.rune_reader=Runenleser
+container.advanced_rune_reader=Verbesserter Runenleser
+
+item.explosion_pickaxe.name=Explosive Spitzhacke
+item.crafting_rune.name=Nutzbare Rune
+item.gamble_pickaxe.name=Spekulanten-Spitzhacke
+item.vein_pickaxe.name=Erzader-Spitzhacke
+item.hasty_pickaxe.name=Eilige Spitzhacke
+item.shock_gem.name=Schock Juwel
+item.shock_talisman.name=Schock Talisman
+item.heat_gem.name=Hitze-Juwel
+item.heat_talisman.name=Hitze-Talisman
+item.golem_helmet.name=Golem Helm
+item.golem_chestplate.name=Golem Brustplatte
+item.golem_leggings.name=Golem Hose
+item.golem_boots.name=Golem Schuhe
+item.water_gem.name=Wasser Juwel
+item.water_talisman.name=Wasser Talisman
+item.wind_gem.name=Wind Juwel
+item.wind_talisman.name=Wind Talisman
+item.ender_gem.name=Ender Juwel
+item.ender_talisman.name=Ender Talisman
+item.cushioned_boots.name=Gepolsterte Schuhe
+item.obsidian_harvester.name=Obsidian Harvester
+item.bound_pickaxe.name=Gebundene Spitzhacke
+item.bound_axe.name=Gebundene Axt
+item.bound_shovel.name=Gebundene Schaufel
+item.barkified_axe.name=Entrindete Axt
+item.lifebelt.name=Rettungsring
+
+tile.rune_reader.name=Runenleser
+tile.advanced_rune_reader.name=Verbesserter Runenleser
