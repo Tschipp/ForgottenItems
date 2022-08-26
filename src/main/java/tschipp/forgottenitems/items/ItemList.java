@@ -55,7 +55,7 @@ public class ItemList {
 	public static ToolMaterial boundToolMaterial = EnumHelper.addToolMaterial("Bound Tools", 3, 1239, 5F, 2.5F, 9);
 	public static ToolMaterial barkifiedAxeMaterial = EnumHelper.addToolMaterial("Barkified Axe", 2, 898, 4.5F, 2.5F, 10);
 
-	public static ArmorMaterial golemArmor = EnumHelper.addArmorMaterial("Golem Armor", FIM.MODID + ":golem_armor", 35, new int[]{4,8,6,5}, 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.5f);
+	public static ArmorMaterial golemArmor = EnumHelper.addArmorMaterial("Golem Armor", FIM.MODID + ":golem_armor", 35, new int[]{4,6,8,5}, 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.5f);
 	public static ArmorMaterial cushionedBootsArmor = EnumHelper.addArmorMaterial("Cushioned Boots", FIM.MODID + ":cushioned_boots", 9, new int[]{2,2,2,3}, 5, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0f);
 	public static ArmorMaterial lifebeltArmor = EnumHelper.addArmorMaterial("Lifebelt", FIM.MODID + ":lifebelt", 14, new int[]{0,0,0,0}, 0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0f);
 
