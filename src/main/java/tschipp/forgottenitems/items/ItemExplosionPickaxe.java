@@ -12,7 +12,7 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.translation.I18n;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -34,7 +34,7 @@ public class ItemExplosionPickaxe extends TSPickaxe {
 	@SideOnly(Side.CLIENT)
 	public String getItemStackDisplayName(ItemStack stack)
 	{
-		return "" + TextFormatting.AQUA + I18n.translateToLocal(this.getUnlocalizedNameInefficiently(stack) + ".name");
+		return "" + TextFormatting.AQUA + I18n.format(this.getUnlocalizedNameInefficiently(stack) + ".name");
 	}
 
 
@@ -72,7 +72,7 @@ public class ItemExplosionPickaxe extends TSPickaxe {
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flag)
     {
-		tooltip.add("Creates an Explosion when breaking blocks");
+		tooltip.add(I18n.format(this.getUnlocalizedNameInefficiently(stack) + ".desc"));
     }
 	
 

@@ -2,6 +2,7 @@ package tschipp.forgottenitems.items;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -17,7 +18,7 @@ public class ItemWaterTalisman extends ItemTalisman
 
 	public ItemWaterTalisman()
 	{
-		super("water_talisman", "Creates a Water Block", 14, ItemList.waterGem);
+		super("water_talisman", I18n.format("item.water_talisman.lore"), 14, ItemList.waterGem);
 		this.setMaxDamage(1000);
 	}
 
