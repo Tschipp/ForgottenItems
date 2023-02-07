@@ -23,7 +23,6 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -32,6 +31,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import tschipp.forgottenitems.FIM;
 import tschipp.forgottenitems.models.ModelGolemArmor;
 import tschipp.forgottenitems.util.FIHelper;
+import net.minecraft.client.resources.I18n;
 
 public class ItemGolemArmor extends ItemArmor {
 
@@ -59,7 +59,7 @@ public class ItemGolemArmor extends ItemArmor {
 	@SideOnly(Side.CLIENT)
 	public String getItemStackDisplayName(ItemStack stack)
 	{
-		return "" + TextFormatting.DARK_AQUA + I18n.translateToLocal(this.getUnlocalizedNameInefficiently(stack) + ".name");
+		return "" + TextFormatting.DARK_AQUA + I18n.format(this.getUnlocalizedNameInefficiently(stack) + ".name");
 	}
 
 
@@ -67,7 +67,7 @@ public class ItemGolemArmor extends ItemArmor {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flag)
 	{
-		tooltip.add("Hard like a Rock");
+		tooltip.add(I18n.format(this.getUnlocalizedNameInefficiently(stack) + ".desc"));
 	}
 
 	@Override

@@ -1,5 +1,6 @@
 package tschipp.forgottenitems.items;
 
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
@@ -13,7 +14,7 @@ import tschipp.forgottenitems.util.FIConfig;
 public class ItemWindTalisman extends ItemTalisman {
 
 	public ItemWindTalisman() {
-		super("wind_talisman", "Fly with the wind", 16, ItemList.windGem);
+		super("wind_talisman", "item.wind_talisman.lore", 16, ItemList.windGem);
 		this.setMaxDamage(1000);
 	}
 

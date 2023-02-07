@@ -28,11 +28,12 @@ import net.minecraft.world.WorldServer;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import tschipp.forgottenitems.util.FIConfig;
+import net.minecraft.client.resources.I18n;
 
 public class ItemHeatTalisman extends ItemTalisman {
 
 	public ItemHeatTalisman() {
-		super("heat_talisman", "Stores extreme amounts of heat", 8, ItemList.fireGem);
+		super("heat_talisman", "item.heat_talisman.lore", 8, ItemList.fireGem);
 		this.setMaxDamage(1000);
 
 	}
@@ -84,7 +85,7 @@ public class ItemHeatTalisman extends ItemTalisman {
 		
 		if(player != null && player.isCreative())
 		{
-			tooltip.add(TextFormatting.RED + "It is not possible to charge the Talisman in Creative mode");
+			tooltip.add(TextFormatting.RED + I18n.format("item.heat_talisman.desc"));
 		}
 		super.addInformation(stack, world, tooltip, flag);
 	}

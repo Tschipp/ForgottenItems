@@ -2,6 +2,7 @@ package tschipp.forgottenitems.items;
 
 import java.util.Random;
 
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
@@ -22,7 +23,7 @@ import tschipp.forgottenitems.util.FIConfig;
 public class ItemEnderTalisman extends ItemTalisman {
 
 	public ItemEnderTalisman() {
-		super("ender_talisman", "Teleports you where you're looking", 18, ItemList.enderGem);
+		super("ender_talisman", "item.ender_talisman.lore", 18, ItemList.enderGem);
 		this.setMaxDamage(1000);
 	}
 
