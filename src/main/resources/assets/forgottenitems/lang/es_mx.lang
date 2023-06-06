@@ -50,7 +50,6 @@ item.ender_talisman.lore=Te teletransporta a donde apuntas
 item.water_talisman.lore=Crea un Bloque de Agua
 item.wind_talisman.lore=Vuela con el viento
 
-
 item.golem_helmet.desc=Duro como la Roca
 item.golem_chestplate.desc=Duro como la Roca
 item.golem_leggings.desc=Duro como la Roca
@@ -64,3 +63,7 @@ tooltip.forgottenitems.crafting_rune.output=Salida:
 tooltip.forgottenitems.crafting_rune.output_none=Nada/Error
 
 tooltip.forgottenitems.gems.desc=Brilla y destellea
+
+notif.forgottenitems.ender_talisman.outofrange=Fuera de alcance.
+notif.forgottenitems.recipe.core_item=§lItem central:§r
+notif.forgottenitems.recipe.other_items=§lOtros items:§r
