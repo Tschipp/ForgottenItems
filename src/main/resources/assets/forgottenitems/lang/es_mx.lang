@@ -1,0 +1,69 @@
+## Translated by KameiB. Feb/2023
+itemGroup.forgottenItems=Forgotten Items
+container.rune_reader=Lector de Runas
+container.advanced_rune_reader=Lector de Runas Avanzado
+
+item.explosion_pickaxe.name=Pico de la Explosión
+item.crafting_rune.name=Runa de Crafteo
+item.gamble_pickaxe.name=Pico del Apostador
+item.vein_pickaxe.name=Pico de Venas
+item.hasty_pickaxe.name=Pico de la Prisa
+item.shock_gem.name=Gema de Choque
+item.shock_talisman.name=Talismán de Choque
+item.heat_gem.name=Gema de Calor
+item.heat_talisman.name=Talismán de Calor
+item.golem_helmet.name=Casco de Golem
+item.golem_chestplate.name=Pechera de Golem
+item.golem_leggings.name=Pantalones de Golem
+item.golem_boots.name=Botas de Golem
+item.water_gem.name=Gema de Agua
+item.water_talisman.name=Talismán de Agua
+item.wind_gem.name=Gema de Viento
+item.wind_talisman.name=Talismán de Viento
+item.ender_gem.name=Gema de ender
+item.ender_talisman.name=Talismán de ender
+item.cushioned_boots.name=Botas Acolchonadas
+item.obsidian_harvester.name=Cosechador de Obsidiana
+item.bound_pickaxe.name=Pico de la Unión
+item.bound_axe.name=Hacha de la Unión
+item.bound_shovel.name=Pala de la Unión
+item.barkified_axe.name=Hacha Descortezadora
+item.lifebelt.name=Salvavidas
+
+tile.rune_reader.name=Lector Runas
+tile.advanced_rune_reader.name=Lector de Runas Avanzado
+
+# Added by KameiB. Item tooltips
+
+item.vein_pickaxe.desc=Mina toda la vena del bloque roto
+item.obsidian_harvester.desc=Muy útil para minar Obsidiana
+item.heat_talisman.lore=Almacena cantidades extremas de calor
+item.heat_talisman.desc=No es posible recargar el Talisman en modo Creativo
+item.hasty_pickaxe.desc=Más avanzado que el Oro.
+item.gamble_pickaxe.desc=Al romper un bloque, hay una probabilidad de duplicarlo o destruirlo
+item.barkified_axe.desc=Descorteza automáticamente los troncos al romperlos
+item.cushioned_boots.desc=Suaviza tu caída
+item.explosion_pickaxe.desc=Crea una explosión cuando rompes bloques
+item.lifebelt.desc=Flotas en el agua
+item.shock_talisman.lore=Convierte el daño por caída en una explosión
+item.ender_talisman.lore=Te teletransporta a donde apuntas
+item.water_talisman.lore=Crea un Bloque de Agua
+item.wind_talisman.lore=Vuela con el viento
+
+item.golem_helmet.desc=Duro como la Roca
+item.golem_chestplate.desc=Duro como la Roca
+item.golem_leggings.desc=Duro como la Roca
+item.golem_boots.desc=Duro como la Roca
+
+tooltip.forgottenitems.bound_tools.bound_to=Unido a
+tooltip.forgottenitems.bound_tools.unbound=No unido
+tooltip.forgottenitems.bound_tools.desc=Permanece en tu inventario cuando mueres.
+
+tooltip.forgottenitems.crafting_rune.output=Salida:
+tooltip.forgottenitems.crafting_rune.output_none=Nada/Error
+
+tooltip.forgottenitems.gems.desc=Brilla y destellea
+
+notif.forgottenitems.ender_talisman.outofrange=Fuera de alcance.
+notif.forgottenitems.recipe.core_item=§lItem central:§r
+notif.forgottenitems.recipe.other_items=§lOtros items:§r

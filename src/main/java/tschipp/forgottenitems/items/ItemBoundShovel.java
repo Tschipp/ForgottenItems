@@ -15,7 +15,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.translation.I18n;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.fml.relauncher.Side;
@@ -160,7 +160,7 @@ public class ItemBoundShovel extends TSShovel {
 	@SideOnly(Side.CLIENT)
 	public String getItemStackDisplayName(ItemStack stack)
 	{
-		return "" + TextFormatting.AQUA + I18n.translateToLocal(this.getUnlocalizedNameInefficiently(stack) + ".name");
+		return "" + TextFormatting.AQUA + I18n.format(this.getUnlocalizedNameInefficiently(stack) + ".name");
 	}
 
 
@@ -170,13 +170,13 @@ public class ItemBoundShovel extends TSShovel {
 	{
 		if(stack.hasTagCompound() && stack.getTagCompound().hasKey("owner"))
 		{
-			tooltip.add("Bound to " + stack.getTagCompound().getString("owner"));
+			tooltip.add(I18n.format("tooltip.forgottenitems.bound_tools.bound_to") + " " + stack.getTagCompound().getString("owner"));
 		}
 		else
 		{
-			tooltip.add("Unbound");
+			tooltip.add(I18n.format("tooltip.forgottenitems.bound_tools.unbound"));
 		}
-		tooltip.add("Stays in the inventory on death.");
+		tooltip.add(I18n.format("tooltip.forgottenitems.bound_tools.desc"));
 	}
 
 

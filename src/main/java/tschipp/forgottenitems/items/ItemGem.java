@@ -10,7 +10,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.translation.I18n;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -41,7 +41,7 @@ public class ItemGem extends TSItem {
 	@SideOnly(Side.CLIENT)
 	public String getItemStackDisplayName(ItemStack stack)
 	{
-		return "" + TextFormatting.YELLOW + I18n.translateToLocal(this.getUnlocalizedNameInefficiently(stack) + ".name");
+		return "" + TextFormatting.YELLOW + I18n.format(this.getUnlocalizedNameInefficiently(stack) + ".name");
 	}
 	
 	
@@ -49,7 +49,7 @@ public class ItemGem extends TSItem {
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flag)
     {
-		tooltip.add("It glows and sparkles");
+		tooltip.add(I18n.format("tooltip.forgottenitems.gems.desc"));
     }
 	
 	

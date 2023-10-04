@@ -7,6 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import net.minecraft.util.text.TextComponentTranslation;
 import org.apache.logging.log4j.Level;
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,7 +15,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
@@ -465,7 +465,18 @@ public class FIHelper
 			player.inventory.addItemStackToInventory(new ItemStack(core, 64));
 		}
 
-		player.sendMessage(new TextComponentString("Core Item: " + core.getRegistryName() + ", Other Items: " + item1.getRegistryName() + ", " + item2.getRegistryName() + ", " + item3.getRegistryName() + ", " + item4.getRegistryName() + ", " + item5.getRegistryName() + ", " + item6.getRegistryName() + ", " + item7.getRegistryName() + ", " + item8.getRegistryName()));
+		//player.sendMessage(new TextComponentString("Core Item: " + core.getRegistryName() + ", Other Items: " + item1.getRegistryName() + ", " + item2.getRegistryName() + ", " + item3.getRegistryName() + ", " + item4.getRegistryName() + ", " + item5.getRegistryName() + ", " + item6.getRegistryName() + ", " + item7.getRegistryName() + ", " + item8.getRegistryName()));
+		player.sendMessage(new TextComponentTranslation("notif.forgottenitems.recipe.core_item").appendText(" ")
+				.appendSibling(new TextComponentTranslation(core.getUnlocalizedName(new ItemStack(core)) + ".name").appendText(", ")
+				.appendSibling(new TextComponentTranslation("notif.forgottenitems.recipe.other_items").appendText(" ")
+				.appendSibling(new TextComponentTranslation(item1.getUnlocalizedNameInefficiently(new ItemStack(item1)) + ".name").appendText(", ")
+				.appendSibling(new TextComponentTranslation(item2.getUnlocalizedNameInefficiently(new ItemStack(item2)) + ".name").appendText(", ")
+				.appendSibling(new TextComponentTranslation(item3.getUnlocalizedNameInefficiently(new ItemStack(item3)) + ".name").appendText(", ")
+				.appendSibling(new TextComponentTranslation(item4.getUnlocalizedNameInefficiently(new ItemStack(item4)) + ".name").appendText(", ")
+				.appendSibling(new TextComponentTranslation(item5.getUnlocalizedNameInefficiently(new ItemStack(item5)) + ".name").appendText(", ")
+				.appendSibling(new TextComponentTranslation(item6.getUnlocalizedNameInefficiently(new ItemStack(item6)) + ".name").appendText(", ")
+				.appendSibling(new TextComponentTranslation(item7.getUnlocalizedNameInefficiently(new ItemStack(item7)) + ".name").appendText(", ")
+				.appendSibling(new TextComponentTranslation(item8.getUnlocalizedNameInefficiently(new ItemStack(item8)) + ".name"))))))))))));
 		FMLLog.log("ForgottenItems", Level.INFO, "Core Item: " + core.getRegistryName() + ", Other Items: " + item1.getRegistryName() + ", " + item2.getRegistryName() + ", " + item3.getRegistryName() + ", " + item4.getRegistryName() + ", " + item5.getRegistryName() + ", " + item6.getRegistryName() + ", " + item7.getRegistryName() + ", " + item8.getRegistryName());
 
 	}

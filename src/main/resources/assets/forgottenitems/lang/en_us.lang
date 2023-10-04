@@ -31,3 +31,38 @@ item.lifebelt.name=Lifebelt
 
 tile.rune_reader.name=Rune Reader
 tile.advanced_rune_reader.name=Advanced Rune Reader
+
+# Added by KameiB. Item tooltips
+
+item.vein_pickaxe.desc=Vein Mines the block broken
+item.obsidian_harvester.desc=Very useful for mining Obsidian
+item.heat_talisman.lore=Stores extreme amounts of heat
+item.heat_talisman.desc=It is not possible to charge the Talisman in Creative mode
+item.hasty_pickaxe.desc=More advanced than gold.
+item.gamble_pickaxe.desc=When breaking a block, there's a chance to either duplicate it or destroy it
+item.barkified_axe.desc=Automatically barkifies logs when breaking them
+item.cushioned_boots.desc=Soften your fall
+item.explosion_pickaxe.desc=Creates an Explosion when breaking blocks
+item.lifebelt.desc=Float in water
+item.shock_talisman.lore=Converts fall damage into an explosion
+item.ender_talisman.lore=Teleports you where you're looking
+item.water_talisman.lore=Creates a Water Block
+item.wind_talisman.lore=Fly with the wind
+
+item.golem_helmet.desc=Hard like a Rock
+item.golem_chestplate.desc=Hard like a Rock
+item.golem_leggings.desc=Hard like a Rock
+item.golem_boots.desc=Hard like a Rock
+
+tooltip.forgottenitems.bound_tools.bound_to=Bound to
+tooltip.forgottenitems.bound_tools.unbound=Unbound
+tooltip.forgottenitems.bound_tools.desc=Stays in the inventory on death.
+
+tooltip.forgottenitems.crafting_rune.output=Output:
+tooltip.forgottenitems.crafting_rune.output_none=None/Error
+
+tooltip.forgottenitems.gems.desc=It glows and sparkles
+
+notif.forgottenitems.ender_talisman.outofrange=Out of Range.
+notif.forgottenitems.recipe.core_item=§lCore item:§r
+notif.forgottenitems.recipe.other_items=§lOther Items:§r

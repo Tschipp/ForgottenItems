@@ -13,7 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.translation.I18n;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.relauncher.Side;
@@ -75,7 +75,7 @@ public class ItemCraftingRune extends TSItem {
 	@SideOnly(Side.CLIENT)
 	public String getItemStackDisplayName(ItemStack stack)
 	{
-		return "" + TextFormatting.LIGHT_PURPLE + I18n.translateToLocal(this.getUnlocalizedNameInefficiently(stack) + ".name");
+		return "" + TextFormatting.LIGHT_PURPLE + I18n.format(this.getUnlocalizedNameInefficiently(stack) + ".name");
 	}
 
 
@@ -94,18 +94,18 @@ public class ItemCraftingRune extends TSItem {
 					Item output = FIHelper.getOutputItem(stack.getTagCompound().getInteger("id"));
 
 					if(output != null)
-						tooltip.add("Output: " + I18n.translateToLocal(output.getUnlocalizedName() + ".name"));
+						tooltip.add(I18n.format("tooltip.forgottenitems.crafting_rune.output") + " " + I18n.format(output.getUnlocalizedName() + ".name"));
 					else
-						tooltip.add("Output: " + "None/Error");
+						tooltip.add(I18n.format("tooltip.forgottenitems.crafting_rune.output") + " "  + I18n.format("tooltip.forgottenitems.crafting_rune.output_none"));
 				}
 				else
 				{
 					Item output = FIHelper.getOutputItemCustom(stack.getTagCompound().getInteger("id"));
 
 					if(output != null)
-						tooltip.add("Output: " + I18n.translateToLocal(output.getUnlocalizedName() + ".name"));
+						tooltip.add(I18n.format("tooltip.forgottenitems.crafting_rune.output") + " " + I18n.format(output.getUnlocalizedName() + ".name"));
 					else
-						tooltip.add("Output: " + "None/Error");
+						tooltip.add(I18n.format("tooltip.forgottenitems.crafting_rune.output") + " "  + I18n.format("tooltip.forgottenitems.crafting_rune.output_none"));
 
 				}
 			}
